@@ -1,0 +1,22 @@
+.list-item {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 20px;
+}
+.similar-product-image {
+  border-radius: 10px;
+}
+.price-rating-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.similar-product-rating-container {
+  display: flex;
+  align-items: center;
+  background-color: #3b82f6;
+  border-radius: 6px;
+  padding: 5px;
+}
