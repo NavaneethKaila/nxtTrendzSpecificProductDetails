@@ -1,0 +1,25 @@
+.user-item {
+  list-style-type: none;
+}
+.user-data-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.edit-icon {
+  font-size: 20px;
+}
+.delete-icon {
+  font-size: 20px;
+  color: red;
+}
+.action-icon-button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.hr-line {
+  margin: 0;
+}
