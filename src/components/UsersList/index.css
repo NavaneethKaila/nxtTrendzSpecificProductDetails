@@ -1,0 +1,79 @@
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.responsive-container {
+  width: 80%;
+  margin: 30px;
+}
+.list-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: #000000;
+}
+.search-input {
+  width: 100%;
+  flex-grow: 1;
+  padding: 5px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+.label {
+  font-size: 16px;
+  width: 25%;
+  text-align: center;
+}
+.users-list-container {
+  padding: 0;
+}
+.delete-selected-button {
+  border-radius: 6px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: red;
+  color: #ffffff;
+}
+.button-pagination-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.pagination-button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(0, 174, 255);
+  padding: 6px;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 5px;
+  font-weight: normal;
+}
+.failure-view-container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.retry-button {
+  background-color: blue;
+  color: #ffffff;
+  padding: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
