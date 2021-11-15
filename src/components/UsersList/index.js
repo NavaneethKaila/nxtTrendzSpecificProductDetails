@@ -141,39 +141,6 @@ class UsersList extends Component {
     )
   }
 
-  pagination = () => (
-    <nav className="pagination">
-      <button
-        type="button"
-        className="pagination-button"
-        onClick={this.goToFirstPage}
-      >
-        <MdFirstPage />
-      </button>
-      <button
-        type="button"
-        className="pagination-button"
-        onClick={this.goToPreviousPage}
-      >
-        <GrFormPrevious />
-      </button>
-      <button
-        type="button"
-        className="pagination-button"
-        onClick={this.goToNextPage}
-      >
-        <GrFormNext />
-      </button>
-      <button
-        type="button"
-        className="pagination-button"
-        onClick={this.goToLastPage}
-      >
-        <MdLastPage />
-      </button>
-    </nav>
-  )
-
   deleteUsers = () => {
     const {totalUsersDataList, checkBoxes} = this.state
     let updatedUsersData = [...totalUsersDataList]
