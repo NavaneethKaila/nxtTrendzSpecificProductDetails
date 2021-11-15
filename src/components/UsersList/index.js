@@ -80,10 +80,12 @@ class UsersList extends Component {
     const currentUsersList = this.getSearchResults()
     const usersPerPage = 10
     const totalPages = Math.ceil(currentUsersList.length / usersPerPage)
+    console.log(totalPages)
     const pageNumbers = []
     for (let i = 1; i <= totalPages; i += 1) {
       pageNumbers.push(i)
     }
+    console.log(pageNumbers)
     return pageNumbers
   }
 
@@ -109,16 +111,16 @@ class UsersList extends Component {
         >
           <GrFormPrevious />
         </button>
-        {this.getPaginationGroup().map(item => (
+        {this.getPaginationGroup().map(pageNumber => (
           <button
             type="button"
             key={v4()}
             onClick={this.changePage}
             className={`pagination-button  ${
-              currentPage === item ? 'active' : null
+              currentPage === pageNumber ? 'active' : null
             }`}
           >
-            {item}
+            {pageNumber}
           </button>
         ))}
         <button
@@ -138,6 +140,39 @@ class UsersList extends Component {
       </nav>
     )
   }
+
+  pagination = () => (
+    <nav className="pagination">
+      <button
+        type="button"
+        className="pagination-button"
+        onClick={this.goToFirstPage}
+      >
+        <MdFirstPage />
+      </button>
+      <button
+        type="button"
+        className="pagination-button"
+        onClick={this.goToPreviousPage}
+      >
+        <GrFormPrevious />
+      </button>
+      <button
+        type="button"
+        className="pagination-button"
+        onClick={this.goToNextPage}
+      >
+        <GrFormNext />
+      </button>
+      <button
+        type="button"
+        className="pagination-button"
+        onClick={this.goToLastPage}
+      >
+        <MdLastPage />
+      </button>
+    </nav>
+  )
 
   deleteUsers = () => {
     const {totalUsersDataList, checkBoxes} = this.state
